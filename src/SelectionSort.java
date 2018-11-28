@@ -9,7 +9,7 @@
  */
 public class SelectionSort {
     //todo: 1.寻找到[i, n) 区间内的最小值
-    //todo: 2.将最小值, 和排序位置的元素进行交换 (C++使用swap函数进行交换, java用什么?)
+    //todo: 2.将最小值, 和排序位置的元素进行交换 (C++使用swap函数进行交换, java用什么? 用自定义的swap方法就行)
     //todo: 3.测试排序算法
 
     public void selectionSortMethod(int[] arr, int n){ //arr是数组, n是数组元素个数
