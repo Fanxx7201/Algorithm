@@ -35,8 +35,8 @@ public class addDigits {
     }
 
     public static void main(String[] args) {
-        System.out.println(addDigits(38));
-        System.out.println(38 % 10);
-        System.out.println(38 / 10);
+        System.out.println(addDigits(244));
+        System.out.println(38 % 10); // 个位
+        System.out.println(38 / 10); // 十位
     }
 }
