@@ -41,6 +41,11 @@ public class RemoveDuplicates {
 
 
     public static void main(String[] args) {
+        Integer a = 1000;
+        Integer b = 1000;
+        if(a.equals(b)){
+            System.out.println("错误");
+        }
         System.out.println(removeEuplicates1(new int[] {0, 0, 1, 2, 3, 3, 3, 4, 4, 5, 5, 5}));
     }
 }
