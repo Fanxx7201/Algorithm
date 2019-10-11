@@ -40,9 +40,28 @@ public class MergeSort {
     //其次, 分别对这两个部分进行归并排序
     private static void merge(Comparable[] arr, int l, int mid, int r){
 
+        //aux是临时空间的意思.
         Comparable[] aux = Arrays.copyOfRange(arr, l, r+1);
         //i:指向左半部分的索引起始位置, j:指向右半部分索引的起始位置
         int i = l, j = mid + 1;
+        //k是临时索引.
+        for(int k = l; k <= r; k++){
+            //左半部分已经全部处理完毕
+            if( i > mid ){
+                arr[k] = aux[j - 1];
+                j++;
+            }else if( j > r){ // 右半部分已经全部处理完毕
+                arr[k] = aux[i - 1];
+                i++;
+            }else if( aux[i - 1].compareTo(aux[j - 1]) < 0){ // 左半部分所指元素 < 右半部分所指元素
+                arr[k] = aux[i - 1];
+                i++;
+            }else{ // 左半部分所指元素 >= 右半部分所指元素
+                arr[k] = aux[j - 1];
+                j++;
+            }
+
+        }
 
     }
 }
